@@ -4,7 +4,8 @@ on:
   schedule:
     - cron: "*/5 * * * *"  # ⏰ Every 5 minutes
   workflow_dispatch:        # ▶️ Manual run option
-
+  repository_dispatch:      # allows external trigger
+  
 jobs:
   check:
     runs-on: ubuntu-latest
