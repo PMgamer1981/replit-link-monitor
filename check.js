@@ -1,7 +1,7 @@
-const fetch = require('node-fetch');
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 const url = "https://replit.com/join/vctakptqip-pm-gamergamer";
-const webhook = ""; // Optional: Add Discord/Telegram webhook here
+const webhook = ""; // Optional webhook
 
 async function check() {
   try {
